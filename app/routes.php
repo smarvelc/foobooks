@@ -13,5 +13,18 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('index');
+});
+
+Route::get('/books', function() {
+    return 'Here are all the books...';
+}); 
+
+Route::get('/practice', function() {
+
+    $fruit = Array('Apples', 'Oranges', 'Pears');
+
+    echo Pre::render($fruit,'Fruit');
+
+
 });
